@@ -1,0 +1,29 @@
+.container-image-data {
+    margin-top: 5%;
+    margin-left: 25%;
+    max-width: 250px;
+}
+
+
+@media (max-width: 1200px) {
+    .container-image-data p {
+        font-size: 0.8rem;
+    }
+}
+@media (max-width: 1000px) {
+    #flex-phone .col-md-phone {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+    }
+
+    .container-image-data {
+        margin-left: 5%;
+        margin-top: 5%;
+        text-align: center;
+    }
+
+    .container-image-data p {
+        font-size: 0.93rem;
+    }
+}
+
