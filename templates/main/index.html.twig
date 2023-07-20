@@ -13,13 +13,52 @@
                 <p class="text-center text-dark">Tu t'intéresses aux grandes stars du foot de 2023. Qui sont-elles ? Excellente question ! Il y a Chloe Kelly, Asisat Oshoala, Grace Geyoro, Ada Hegerberg, Sam Kerr, et bien d'autres encore. Découvre-les toutes dans notre nouvelle vidéo</p>
             </div>
         </div>
+        <div class="d-flex justify-content-center mt-3">
+            <button class="btn bg-dark text-white rounded-5" style="margin-right:6px">Télécharger la Nike App</button>
+            <button class="btn bg-dark text-white rounded-5">Voir les articles de foot</button>
+        </div>
     </div>
+<style>
+        /* CSS personnalisé pour l'effet de zoom */
+        .hover-zoom {
+            transition: transform 0.9s ease;
+        }
 
-    <div class="container-fluid">
+        .hover-zoom:hover {
+            transform: scale(1.1);
+        }
+    </style>
+    <div class="mt-4" style="padding-bottom: 56.25%; max-width: 100%; position: relative;"><iframe src="https://www.youtube.com/embed/y5Jg9Wxc6yo??cc_load_policy=0&autoplay=1&loop=1&mute=1&iv_load_policy=3&controls=0&disablekb=1&fs=0" width="800" height="450" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;" frameborder="0"></iframe></div>
+    
+    
+    
+    <div class="container-fluid mt-5 p-5 m-0">
+        <h2 class="p-0 m-0 mb-4 p-2" style="font-weight: 400">Tendance de cette semaine</h2>
+        <div class="row p-0 m-0">
+            {% for chaussures in chaussure %}
+                <div class="col-md-4 col-sm-6 mb-5">
+                    <a href="#" class="bg-light d-flex justify-content-center">
+                        <img src="jordan.webp" class="img-fluid hover-zoom" alt="">
+                    </a>
+                    <a href="#" style="text-decoration:none">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p class="text-dark mt-2 mb-0">{{chaussures.name}}</p>
+                            </div>
+                            <div class="col-md-6">
+                                <p class="text-dark mt-2 mb-0 text-end">{{chaussures.price}} €</p>
+                            </div>
+                        </div>
+                        <p class="m-0" style="color: #c4c4c4">Chaussure pour femme</p>
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
     </div>
 
     <div class="container">
-        <div class="row mt-5 flex-md-columns" id="flex-phone">
+    <h2 class="p-0 m-0 mb-4 p-2" style="font-weight: 400">Découvrir nos apps</h2>
+        <div class="row flex-md-columns" id="flex-phone">
             <div class="col-md-6 d-flex justify-content-center mb-4 col-md-phone">
                 <a href="#" class="btn position-relative">
                     <img src="https://static.nike.com/a/images/f_auto/dpr_1.0,cs_srgb/h_899,c_limit/e423b40b-3a65-45ba-b1d3-342fdf41e0d4/nike-just-do-it.jpg" width="100%" height="100%" alt="men">
@@ -48,4 +87,79 @@
             </div>
         </div>
     </div>
+
+    <section class="">
+    <!-- Footer -->
+    <footer class="bg-dark text-white mt-5">
+        <!-- Grid container -->
+        <div class="container p-4">
+        <!--Grid row-->
+        <div class="row">
+            <!--Grid column-->
+            <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+            <h5 class="text-uppercase">Footer Content</h5>
+
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis
+                molestias. Fugiat pariatur maxime quis culpa corporis vitae repudiandae
+                aliquam voluptatem veniam, est atque cumque eum delectus sint!
+            </p>
+            </div>
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase">Links</h5>
+
+            <ul class="list-unstyled mb-0">
+                <li>
+                <a href="#!" class="text-white">Link 1</a>
+                </li>
+                <li>
+                <a href="#!" class="text-white">Link 2</a>
+                </li>
+                <li>
+                <a href="#!" class="text-white">Link 3</a>
+                </li>
+                <li>
+                <a href="#!" class="text-white">Link 4</a>
+                </li>
+            </ul>
+            </div>
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase mb-0">Links</h5>
+
+            <ul class="list-unstyled">
+                <li>
+                <a href="#!" class="text-white">Link 1</a>
+                </li>
+                <li>
+                <a href="#!" class="text-white">Link 2</a>
+                </li>
+                <li>
+                <a href="#!" class="text-white">Link 3</a>
+                </li>
+                <li>
+                <a href="#!" class="text-white">Link 4</a>
+                </li>
+            </ul>
+            </div>
+            <!--Grid column-->
+        </div>
+        <!--Grid row-->
+        </div>
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2020 Copyright:
+        <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+    </section>
 {% endblock %}
